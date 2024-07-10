@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="flex-container">
+        <div class="form-container">
+            <div class="form-heading">
+              <div class="form-heading-element">
+                <div class="form-heading-text">Register</div>
+                <div class="form-heading-graphic"></div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="title">
+                    First name
+                  </div>
+                  <div class="input-element">
+                    <input
+                      type="text"
+                      id="txtFirstName"
+                      name="firstName"
+                      autofocus
+                    />
+                  </div>
+                </div>
+      
+                <div class="input-container">
+                  <div class="title">Last name</div>
+                  <div class="input-element">
+                    <input
+                      type="text"
+                      id="txtLastName"
+                      name="lastName"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="title">Email</div>
+                  <div class="input-element">
+                    <input
+                      type="text"
+                      id="txtEmail"
+                      name="email"
+                    />
+                  </div>
+                </div>
+      
+                <div class="input-container">
+                  <div class="title">Gender</div>
+                  <div class="input-element">
+                    <input
+                      type="radio"
+                      id="male"
+                      name="gender"
+                      value="male"
+                    />
+                    <label for="male">Male</label>
+                    <input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                    />
+                    <label for="female">Female</label>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="title">Date of birth</div>
+                  <div class="input-element">
+                    <input
+                      type="date"
+                      id="txtDate"
+                      name="date"
+                    />
+                  </div>
+                </div>
+      
+                <div class="input-container">
+                  <div class="title">Hobbies</div>
+                  <div class="input-element">
+                    <input
+                      type="text"
+                      list="hobbyList"
+                      id="txtHobby"
+                      name="hobby"
+                      autocomplete="off"
+                      multiple
+                    />
+                    <datalist id="hobbyList">
+                      <option value="Singing"></option>
+                      <option value="Dancing"></option>
+                      <option value="Football"></option>
+                    </datalist>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="title">
+                    Phone
+                  </div>
+                  <div class="input-element">
+                    <input
+                      type="tel"
+                      id="txtPhone"
+                      name="Phone"
+                    />
+                  </div>
+                </div>
+      
+                <div class="input-container">
+                  <div class="title">Company</div>
+                  <div class="input-element">
+                    <input
+                      type="text"
+                      id="txtCompany"
+                      name="Company"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="submit">
+                <input type="submit" value="Submit" id="submitForm" />
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    <br />
+  </body>
+</html>
