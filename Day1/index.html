@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="flex-container">
@@ -108,6 +115,22 @@
               </div>
               <div class="input-row">
                 <div class="input-container">
+                  <div class="title">Domain</div>
+                  <div class="input-element">
+                    <select
+                      id="ddlDomain"
+                      name="domain"
+                    >
+                    <option>Select</option>
+                    <option>Full Stack</option>
+                    <option>ML/AI</option>
+                    <option>Blockchain</option>
+                    <option>Data Engineer</option>
+                  </select>
+                  </div>
+                </div>
+      
+                <div class="input-container">
                   <div class="title">
                     Phone
                   </div>
@@ -119,16 +142,36 @@
                     />
                   </div>
                 </div>
-      
-                <div class="input-container">
-                  <div class="title">Company</div>
-                  <div class="input-element">
-                    <input
-                      type="text"
-                      id="txtCompany"
-                      name="Company"
-                    />
-                  </div>
+              </div>
+
+              <div class="doc-container">
+                <div class="title">
+                  Resume
+                </div>
+                <div class="input-element">
+                  <label id="docLabel" for="doc">
+                    <div id="card" class="doc-upload-card">
+                      <i class="fa-sharp fa-solid fa-plus" id="iconForAddPic"></i>
+                    </div>
+                  </label>
+                  <div id="filename"></div>
+                  <input
+                    type="file"
+                    name="doc"
+                    id="doc"
+                    hidden
+                  />
+                </div>
+              </div>
+
+              <div class="bio-container">
+                <div class="title">Bio</div>
+                <div class="input-element">
+                  <textarea
+                    type="text"
+                    id="txtCompany"
+                    name="Company"
+                  ></textarea>
                 </div>
               </div>
               <div class="submit">
@@ -137,7 +180,5 @@
             </div>
           </div>
     </div>
-    
-    <br />
   </body>
 </html>
