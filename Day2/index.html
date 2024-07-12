@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="table.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="helpers.js"></script>
+  </head>
+  <body>
+    <div class="flex-container">
+        <div class="form-container">
+            <div class="form-heading">
+              <div class="form-heading-element">
+                <div class="form-heading-text">Register</div>
+                <div class="form-heading-graphic"></div>
+              </div>
+              <div class="color-picker">
+                <input id="colorPicker" type="color" value="#00aeff">
+              </div>
+            </div>
+            <form class="container" id="userForm">
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="title">
+                    First name <span id="txtFirstNameMsg">*</span>
+                  </div>
+                  <div class="input-element">
+                    <input
+                      type="text"
+                      id="txtFirstName"
+                      name="firstName"
+                      custom-validation="isRequired:true"
+                      autofocus
+                    />
+                  </div>
+                </div>
+      
+                <div class="input-container">
+                  <div class="title">Last name <span id="txtLastNameMsg">*</span></div>
+                  <div class="input-element">
+                    <input
+                      type="text"
+                      id="txtLastName"
+                      name="lastName"
+                      custom-validation="isRequired:true"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="title">Email <span id="txtEmailMsg">*</span></div>
+                  <div class="input-element">
+                    <input
+                      type="text"
+                      id="txtEmail"
+                      name="email"
+                      custom-validation="isRequired:true|isPattern:[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
+                    />
+                  </div>
+                </div>
+      
+                <div class="input-container">
+                  <div class="title">Gender <span id="genderMsg">*</span></div>
+                  <div class="input-element" id="gender" custom-validation="validateRadio:male,female">
+                    <input
+                      type="radio"
+                      id="male"
+                      name="gender"
+                      value="male"
+                    />
+                    <label for="male">Male</label>
+                    <input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                    />
+                    <label for="female">Female</label>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="title">Date of birth <span id="dtDateMsg">*</span></div>
+                  <div class="input-element">
+                    <input
+                      type="date"
+                      id="dtDate"
+                      name="dateOfBirth"
+                      custom-validation="isRequired:true"
+                      max="2005-12-31"
+                    />
+                  </div>
+                </div>
+      
+                <div class="input-container">
+                  <div class="title">Hobbies <span id="txtHobbyMsg"></span></div>
+                  <div class="input-element">
+                    <input
+                      type="text"
+                      id="txtHobby"
+                      name="hobby"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="title">Domain <span id="ddlDomainMsg">*</span></div>
+                  <div class="input-element">
+                    <select
+                      id="ddlDomain"
+                      name="domain"
+                      custom-validation="isRequired:true"
+                    >
+                    <option value="">Select</option>
+                    <option value="Full Stack">Full Stack</option>
+                    <option value="ML/AI">ML/AI</option>
+                    <option value="Blockchain">Blockchain</option>
+                    <option value="Data Engineer">Data Engineer</option>
+                  </select>
+                  </div>
+                </div>
+      
+                <div class="input-container">
+                  <div class="title">
+                    Phone <span id="txtPhoneMsg">*</span>
+                  </div>
+                  <div class="input-element">
+                    <input
+                      type="tel"
+                      id="txtPhone"
+                      name="phone"
+                      custom-validation = "isRequired:true|isPattern:^\d{6,12}$"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="doc-container">
+                <div class="title">
+                  Resume <span id="docResumeMsg">*</span>
+                </div>
+                <div class="input-element">
+                  <label id="docLabel" for="docResume">
+                    <div id="card" class="doc-upload-card">
+                      <i class="fa-solid fa-cloud-arrow-up" id="iconForAddPic"></i>
+                    </div>
+                    
+                  </label>
+                  <span id="filename"></span>
+                  <input
+                    type="file"
+                    name="doc"
+                    id="docResume"
+                    custom-validation="validateDoc:filename"
+                    hidden
+                  />
+                </div>
+                
+              </div> -->
+
+              <div class="bio-container">
+                <div class="title">Bio <span id="txtBioMsg"></span></div>
+                <div class="input-element">
+                  <textarea
+                    type="text"
+                    id="txtBio"
+                    name="bio"
+                    custom-validation="isMaxLength:200"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="button-add">
+                <input type="submit" value="Submit" id="btnSubmitForm" action="0"/>
+              </div>
+            </div>
+          </form>
+          <div class="table-container">
+            <div class="form-heading">
+                <div class="form-heading-element">
+                  <div class="form-heading-text">Data</div>
+                  <div class="form-heading-graphic"></div>
+                </div>
+              <div class="button-add">
+                <input type="button" value="Add" id="btnAddNew"/>
+              </div>
+            </div>
+            
+            <div class="user-list-container">
+              <div class="row header">
+                  <div class="table-element">Name</div>
+                  <div class="table-element">Email</div>
+                  <div class="table-element">Gender</div>
+                  <div class="table-element">DOB</div>
+                  <div class="table-element">Domain</div>
+                  <div class="table-element">Phone</div>
+                  <div class="table-element">Actions</div>
+              </div>
+              <div class="row-group">
+                <!-- <div class="row">
+                  <div class="table-element">Pradosh Sahoo</div>
+                  <div class="table-element">pradosh@gmail.com</div>
+                  <div class="table-element">Gender</div>
+                  <div class="table-element">DOB</div>
+                  <div class="table-element">Domain</div>
+                  <div class="table-element">Phone</div>
+                  <div class="table-element">
+                    <button><i class="fa-solid fa-pen"></i></button>
+                    <button><i class="fa-solid fa-trash"></i></button>
+                    
+                  </div>
+                </div>                 -->
+              </div>            
+          </div>
+          </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
