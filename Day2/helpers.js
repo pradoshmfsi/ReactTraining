@@ -1,6 +1,8 @@
-function $(query) {
-  return document.querySelectorAll(query);
-}
+// function $() {
+//   return document.querySelectorAll();
+// }
+
+const $ = document.querySelectorAll.bind(document);
 
 function Validator(element) {
   let errorMsgEle = $(`#${element.id}Msg`)[0];
